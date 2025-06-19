@@ -1,0 +1,310 @@
+/* Import the Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Add your CSS here */
+
+/* Reset default margin and padding for root and body */
+:root, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a slightly darker background for the whole page */
+body {
+  background-color: #e0e0e0; /* Light gray, a bit darker than white */
+}
+
+/* Hero Section Styles */
+header {
+  /* Make the header take up half the viewport height */
+  height: 70vh;
+  /* Add a linear gradient background from #00C7FD (top) to #0068B5 (bottom) */
+  background: linear-gradient(to bottom,#00C7FD, #0068B5, #0068B5);
+  /* Center the content vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Removed border-top-left-radius and border-bottom-right-radius for square corners */
+  font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat font for header */
+  position: relative; /* So navbar can be absolutely positioned inside */
+}
+
+header div {
+  /* Center the text inside the hero section */
+  text-align: center;
+  /* Optional: Add some padding for better spacing */
+  padding: 20px;
+}
+
+header img {
+  /* Set a max width for the logo so it looks good on all screens */
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header img[src$="intel-header-logo.svg"] {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+header h1 {
+  /* Make the main heading stand out */
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  /* Style the subheading/description */
+  color: #e0f7fa;
+  font-size: 1.2em;
+  max-width: 800px; /* Limit the width of the paragraph for better readability */
+  margin: 0 auto; /* Center the paragraph inside the header */
+}
+
+/* Style for the Explore More button in the hero section */
+.explore-btn {
+  margin-top: 20px; /* Space above the button */
+  padding: 12px 32px; /* Padding inside the button */
+  background-color: #fff; /* White background */
+  color: #0068B5; /* White text */
+  border: none; /* No border */
+  border-radius: 0; /* Remove border radius for square corners */
+  font-size: 1.1em; /* Slightly larger text */
+  font-family: 'Montserrat', Arial, sans-serif; /* Match site font */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color, border 0.3s;
+  border: 2px solid #00C7FD;
+  margin-top: 70px;
+}
+
+.explore-btn:hover {
+  background-color: #fff; /* Lighter blue on hover */
+  color: #262626; /* Dark text on hover for contrast */
+  border: 2px solid #262626;
+}
+
+/* Main Navbar Styles */
+.main-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white; /* Set navbar background to white */
+  /* Removed padding for no extra space inside navbar */
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px; /* Set navbar height to 70px */
+  text-align: center; /* Center the text and inline elements inside the navbar */
+  padding-right: 30px; /* Add padding to the right side of the navbar */
+  border-bottom: 0.2px solid #262626; /* Adds a solid black line under the navbar */
+}
+
+.main-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the list items horizontally */
+}
+
+.main-navbar .navbar-left {
+  justify-content: flex-start;
+}
+
+.main-navbar .navbar-right {
+  justify-content: flex-end;
+}
+
+.main-navbar a {
+  color: #0068B5; /* Set navbar link color to #0068B5 */
+  text-decoration: none;
+  font-weight: 400; /* Make navbar link text thin */
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.main-navbar a:hover {
+  color: #262626; /* Change link color to #262626 on hover */
+}
+
+/* Remove margin and padding from the Intel logo in the navbar */
+.main-navbar img {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Make sure navbar links and images are centered vertically */
+.main-navbar li {
+  display: flex;
+  align-items: center; /* Vertically center content in each list item */
+  height: 70px;        /* Match the navbar height */
+}
+
+/* Timeline Section Styles */
+section {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Enable horizontal scrolling on large screens */
+  gap: 20px; /* Space between cards */
+  padding: 40px 10px 20px 10px; /* Add 10px padding to left and right */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
+}
+
+section > div {
+  background: #f8fbfd; /* Light blue background for a clean look */
+  border: 1px solid #262626; /* Thinner border for timeline cards */
+  border-radius: 10px 0 10px 0; /* Default: top left and bottom right */
+  flex: 0 0 auto;
+  height: 380px;
+  width: 320px;
+  box-shadow: 0 4px 16px rgba(0,104,181,0.18); /* More visible box shadow for cards */
+  text-align: center;
+  color: #0068B5; /* Intel blue for text */
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s, border-radius 0.3s; /* Add border-radius to transition */
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Hide overflow for overlay effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-snap-align: start; /* Snap each card to the start of the scroll area */
+}
+
+section > div h2 {
+  color: #00C7FD; /* Lighter blue for year */
+  font-size: 1.5em;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+section > div h3 {
+  color: #0068B5;
+  font-size: 1.1em;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+section > div img {
+  /* Make images take up most of the card space */
+  width: 90%;
+  height: 60%;
+  max-width: 95%;
+  max-height: 60%;
+  flex-grow: 1;
+  object-fit: cover;
+  margin-bottom: 12px;
+  margin-top: 8px;
+  border-radius: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+section > div p {
+  /* Adjust overlay height to match restored image size */
+  height: 100%;
+  top: 0px;
+  /* Overlay the text on top of the image, hidden by default */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  max-height: none;
+  overflow: hidden;
+  transition: opacity 0.4s;
+  color: #fff;
+  font-size: 1em;
+  margin: 0;
+  line-height: 1.5;
+  z-index: 2;
+  background: rgba(0, 104, 181, 0.5); /* Semi-transparent blue overlay */
+  backdrop-filter: blur(4px); /* Blur the background for readability */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 0; /* Remove border radius from overlay */
+}
+
+section > div:hover p {
+  /* Show the overlay text on hover */
+  opacity: 1;
+  color: #fff;
+}
+
+section > div:hover {
+  transform: translateY(-10px); /* Move the card up slightly on hover */
+  border-radius: 0 10px 0 10px; /* On hover: top right and bottom left */
+}
+
+/* Center the timeline cards section */
+.timeline-cards {
+  /* Use flexbox to center the cards horizontally */
+  display: flex;
+  flex-direction: row; /* Cards in a row */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+  margin-top: 30px; /* Space above the cards */
+  flex-wrap: wrap; /* Allow cards to wrap on small screens */
+}
+
+/* Style for each individual card */
+.timeline-card {
+  background: #f5f5f5; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Soft shadow */
+  padding: 16px; /* Space inside the card */
+  width: 300px; /* Increased width for each card */
+  text-align: center; /* Center text inside the card */
+}
+
+/* Make images fit nicely inside cards */
+.timeline-card img {
+  width: 100%; /* Image fills the card width */
+  border-radius: 4px; /* Slightly rounded image corners */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 800px) {
+  section {
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 24px;
+    align-items: center;
+  }
+  section > div {
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+  }
+  .main-navbar {
+    display: none; /* Hide the navbar on small screens */
+  }
+  header {
+    margin-top: 0px; /* Remove space for fixed navbar */
+    position: relative;
+    width: 100%;
+  }
+}
+
+/* Optional: Hide horizontal scrollbar for a cleaner look */
+section::-webkit-scrollbar {
+  display: none;
+}

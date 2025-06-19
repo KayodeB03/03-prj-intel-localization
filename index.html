@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Use Bootstrap RTL CSS for right-to-left support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -74,118 +76,94 @@
         personal computers.
       </p>
     </div>
+  </section>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+  <!-- Cards 1-4 section (centered horizontally using Bootstrap flex utilities) -->
+  <div class="container mt-5 d-flex justify-content-center">
+    <!-- Existing code for cards 1-4 (centered) -->
+  </div>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
+  <!-- Three columns section (with Learn More buttons) -->
+  <section class="container mt-5" style="display: flex;">
+    <!-- First column -->
+    <div class="col-md-4 p-3 border bg-light">
       <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
+      <h4>أطلقت شركة إنتل استراتيجيتها RISE (مسؤولة، شاملة، مستدامة، وتمكينية) وأهدافها لعام 2030، بهدف دفع عجلة التقدم على مستوى الصناعة في مجال العمل المناخي، وإدارة المياه، والحد من النفايات.</h4>
+      <!-- Learn More button -->
+      <button class="btn btn-primary mt-2">اعرف المزيد</button>
     </div>
-
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
-
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
+    <!-- Second column -->
+    <div class="col-md-4 p-3 border bg-light">
       <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
+      <h4>وتحقق الشركة نسبة 99% من استخدام الكهرباء المتجددة في جميع أنحاء العالم، مما يساعد على خفض انبعاثات الكربون بشكل كبير ودفع التقدم نحو أهداف الاستدامة طويلة الأجل لشركة إنتل.</h4>
+      <!-- Learn More button -->
+      <button class="btn btn-primary mt-2">اعرف المزيد</button>
     </div>
-
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
+    <!-- Third column -->
+    <div class="col-md-4 p-3 border bg-light">
       <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+      <h4>تستضيف إنتل أول قمة للاستدامة، حيث تجمع الموردين والمسؤولين الحكوميين وقادة الصناعة للتعاون في تصنيع أشباه الموصلات المستدامة من الجيل التالي.</h4>
+      <!-- Learn More button -->
+      <button class="btn btn-primary mt-2">اعرف المزيد</button>
     </div>
   </section>
 
-  <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+  <!-- Subscription Form Section -->
+  <section class="container mt-5">
+    <!-- Section heading -->
+    <h2 class="mb-4">اشترك في نشرة إنتل للاستدامة</h2>
+    <!-- Simple Bootstrap form -->
+    <form>
+      <!-- Email input field -->
+      <div class="mb-3">
+        <label for="subscriberEmail" class="form-label">البريد الإلكتروني</label>
+        <input type="email" class="form-control" id="subscriberEmail" placeholder="أدخل بريدك الإلكتروني">
       </div>
+      <!-- Subscribe button -->
+      <button type="submit" class="btn btn-primary">اشترك</button>
+    </form>
+  </section>
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+  <!-- Footer Section -->
+  <footer class="container mt-5 mb-3">
+    <hr>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <!-- Copyright notice -->
+      <div class="mb-2 mb-md-0">
+        &copy; 2024 إنتل. جميع الحقوق محفوظة.
       </div>
-
-      <!-- Column 3 -->
+      <!-- Placeholder navigation links -->
       <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <a href="#" class="mx-2 text-decoration-none">سياسة الخصوصية</a>
+        <a href="#" class="mx-2 text-decoration-none">شروط الاستخدام</a>
+        <a href="#" class="mx-2 text-decoration-none">اتصل بنا</a>
       </div>
-
     </div>
-  </section>
+  </footer>
 
-  <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
-  </section>
+  <!-- Script to auto-detect language and adjust RTL layout -->
+  <script>
+  // This script checks the page language and sets RTL if needed
+
+  function setDirectionByLang() {
+    // List of RTL language codes
+    var rtlLangs = ['ar', 'he', 'fa', 'ur'];
+    // Get the current language from the <html> tag
+    var htmlTag = document.documentElement;
+    var lang = htmlTag.lang ? htmlTag.lang.toLowerCase() : '';
+    // If the language is RTL, set dir="rtl", else set dir="ltr"
+    if (rtlLangs.includes(lang)) {
+      htmlTag.setAttribute('dir', 'rtl');
+    } else {
+      htmlTag.setAttribute('dir', 'ltr');
+    }
+  }
+
+  // Run on page load
+  setDirectionByLang();
+
+  // Also check periodically in case language changes (e.g., Google Translate)
+  setInterval(setDirectionByLang, 1000);
+  </script>
 </body>
 </html>
